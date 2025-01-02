@@ -2,66 +2,66 @@
 <html lang="fr">
 <head>
     <script>
-    const texts = {
-        fr: {
-            title: "Bienvenue sur Xénon",
-            description: "Rejoignez notre aventure Minecraft unique !",
-            aboutTitle: "À propos du serveur",
-            aboutText: "Xénon est un serveur Minecraft dédié aux aventures épiques, au fun et à la créativité. Rejoignez une communauté dynamique et découvrez des événements uniques !",
-            featuresTitle: "Fonctionnalités principales",
-            survivalTitle: "Survie Améliorée",
-            survivalText: "Profitez d'un gameplay équilibré avec des plugins personnalisés.",
-            eventsTitle: "Événements Réguliers",
-            eventsText: "Participez à des compétitions et des événements spéciaux chaque semaine.",
-            communityTitle: "Communauté Active",
-            communityText: "Discutez, échangez et collaborez avec d'autres joueurs passionnés.",
-            joinTitle: "Rejoindre le serveur",
-            joinText: "Adresse IP : <strong>outside-wallace.joinmc.link</strong>",
-            versionText: "Version recommandée : 1.21.4",
-            downloadTitle: "Télécharger le Launcher Xénon",
-            downloadText: "Notre launcher personnalisé simplifie l'accès à votre serveur et propose des fonctionnalités exclusives.",
-            downloadBtn: "Téléchargement pas encore disponible."
-        },
-        en: {
-            title: "Welcome to Xénon",
-            description: "Join our unique Minecraft adventure!",
-            aboutTitle: "About the server",
-            aboutText: "Xénon is a Minecraft server dedicated to epic adventures, fun, and creativity. Join a dynamic community and discover unique events!",
-            featuresTitle: "Main Features",
-            survivalTitle: "Enhanced Survival",
-            survivalText: "Enjoy balanced gameplay with custom plugins.",
-            eventsTitle: "Regular Events",
-            eventsText: "Participate in weekly competitions and special events.",
-            communityTitle: "Active Community",
-            communityText: "Chat, trade, and collaborate with other passionate players.",
-            joinTitle: "Join the server",
-            joinText: "IP Address: <strong>outside-wallace.joinmc.link</strong>",
-            versionText: "Recommended version: 1.21.4",
-            downloadTitle: "Download the Xénon Launcher",
-            downloadText: "Our custom launcher simplifies access to your server and offers exclusive features.",
-            downloadBtn: "Launcher not available."
-        }
-    };
+        const texts = {
+            fr: {
+                title: "Bienvenue sur Xénon",
+                description: "Rejoignez notre aventure Minecraft unique !",
+                aboutTitle: "À propos du serveur",
+                aboutText: "Xénon est un serveur Minecraft dédié aux aventures épiques, au fun et à la créativité. Rejoignez une communauté dynamique et découvrez des événements uniques !",
+                featuresTitle: "Fonctionnalités principales",
+                survivalTitle: "Survie Améliorée",
+                survivalText: "Profitez d'un gameplay équilibré avec des plugins personnalisés.",
+                eventsTitle: "Événements Réguliers",
+                eventsText: "Participez à des compétitions et des événements spéciaux chaque semaine.",
+                communityTitle: "Communauté Active",
+                communityText: "Discutez, échangez et collaborez avec d'autres joueurs passionnés.",
+                joinTitle: "Rejoindre le serveur",
+                joinText: "Adresse IP : <strong>outside-wallace.joinmc.link</strong>",
+                versionText: "Version recommandée : 1.21.4",
+                downloadTitle: "Télécharger le Launcher Xénon",
+                downloadText: "Notre launcher personnalisé simplifie l'accès à votre serveur et propose des fonctionnalités exclusives.",
+                downloadBtn: "Téléchargement pas encore disponible."
+            },
+            en: {
+                title: "Welcome to Xénon",
+                description: "Join our unique Minecraft adventure!",
+                aboutTitle: "About the server",
+                aboutText: "Xénon is a Minecraft server dedicated to epic adventures, fun, and creativity. Join a dynamic community and discover unique events!",
+                featuresTitle: "Main Features",
+                survivalTitle: "Enhanced Survival",
+                survivalText: "Enjoy balanced gameplay with custom plugins.",
+                eventsTitle: "Regular Events",
+                eventsText: "Participate in weekly competitions and special events.",
+                communityTitle: "Active Community",
+                communityText: "Chat, trade, and collaborate with other passionate players.",
+                joinTitle: "Join the server",
+                joinText: "IP Address: <strong>outside-wallace.joinmc.link</strong>",
+                versionText: "Recommended version: 1.21.4",
+                downloadTitle: "Download the Xénon Launcher",
+                downloadText: "Our custom launcher simplifies access to your server and offers exclusive features.",
+                downloadBtn: "Launcher not available."
+            }
+        };
 
-    function changeLanguage(language) {
-        document.getElementById("title").innerText = texts[language].title;
-        document.getElementById("description").innerText = texts[language].description;
-        document.getElementById("about-title").innerText = texts[language].aboutTitle;
-        document.getElementById("about-text").innerText = texts[language].aboutText;
-        document.getElementById("features-title").innerText = texts[language].featuresTitle;
-        document.getElementById("survival-title").innerText = texts[language].survivalTitle;
-        document.getElementById("survival-text").innerText = texts[language].survivalText;
-        document.getElementById("events-title").innerText = texts[language].eventsTitle;
-        document.getElementById("events-text").innerText = texts[language].eventsText;
-        document.getElementById("community-title").innerText = texts[language].communityTitle;
-        document.getElementById("community-text").innerText = texts[language].communityText;
-        document.getElementById("join-title").innerText = texts[language].joinTitle;
-        document.getElementById("join-text").innerHTML = texts[language].joinText;
-        document.getElementById("version-text").innerText = texts[language].versionText;
-        document.getElementById("download-title").innerText = texts[language].downloadTitle;
-        document.getElementById("download-text").innerText = texts[language].downloadText;
-        document.getElementById("download-btn").innerText = texts[language].downloadBtn;
-    }
+        function changeLanguage(language) {
+            document.getElementById("title").innerText = texts[language].title;
+            document.getElementById("description").innerText = texts[language].description;
+            document.getElementById("about-title").innerText = texts[language].aboutTitle;
+            document.getElementById("about-text").innerText = texts[language].aboutText;
+            document.getElementById("features-title").innerText = texts[language].featuresTitle;
+            document.getElementById("survival-title").innerText = texts[language].survivalTitle;
+            document.getElementById("survival-text").innerText = texts[language].survivalText;
+            document.getElementById("events-title").innerText = texts[language].eventsTitle;
+            document.getElementById("events-text").innerText = texts[language].eventsText;
+            document.getElementById("community-title").innerText = texts[language].communityTitle;
+            document.getElementById("community-text").innerText = texts[language].communityText;
+            document.getElementById("join-title").innerText = texts[language].joinTitle;
+            document.getElementById("join-text").innerHTML = texts[language].joinText;
+            document.getElementById("version-text").innerText = texts[language].versionText;
+            document.getElementById("download-title").innerText = texts[language].downloadTitle;
+            document.getElementById("download-text").innerText = texts[language].downloadText;
+            document.getElementById("download-btn").innerText = texts[language].downloadBtn;
+        }
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
