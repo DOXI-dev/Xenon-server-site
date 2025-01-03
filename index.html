@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serveur Minecraft Xénon</title>
-    <link rel="icon" href="icon.png" type="image/png">
+    <link rel="icon" href="https://i.postimg.cc/5tFr4xd1/server-icon-copie.png" type="image/png">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -102,81 +102,103 @@
         .download-btn:hover {
             background-color: #008ecc;
         }
+        .language-switcher {
+            margin: 20px;
+            text-align: center;
+        }
+        .language-switcher button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #00c8ff;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .language-switcher button:hover {
+            background-color: #008ecc;
+        }
     </style>
     <script>
         const translations = {
             en: {
-                about: "About the Server",
-                aboutText: "Xenon is a Minecraft server dedicated to epic adventures, fun, and creativity. Join a dynamic community and discover unique events!",
+                about: "About the server",
                 features: "Main Features",
+                join: "Join the server",
+                download: "Download the Launcher",
+                downloadUnavailable: "Download not available yet.",
+                ip: "Server IP: <strong>outside-wallace.joinmc.link</strong>",
+                version: "Recommended version: 1.21.4",
                 survival: "Enhanced Survival",
-                survivalText: "Enjoy balanced gameplay with custom plugins.",
+                survivalDesc: "Enjoy balanced gameplay with custom plugins.",
                 events: "Regular Events",
-                eventsText: "Participate in competitions and special events every week.",
+                eventsDesc: "Participate in weekly competitions and special events.",
                 community: "Active Community",
-                communityText: "Chat, trade, and collaborate with other passionate players.",
-                join: "Join the Server",
-                ip: "Server IP: outside-wallace.joinmc.link",
-                version: "Recommended Version: 1.21.4",
-                download: "Download the Xenon Launcher",
-                downloadText: "Our custom launcher simplifies access to your server and offers exclusive features.",
-                downloadUnavailable: "Download not yet available.",
-                footer: "&copy; 2025 Xenon Server - All rights reserved."
+                communityDesc: "Chat, trade, and collaborate with other passionate players.",
+                welcome: "Welcome to Xénon",
+                tagline: "Join our unique Minecraft adventure!"
             },
             fr: {
                 about: "À propos du serveur",
-                aboutText: "Xénon est un serveur Minecraft dédié aux aventures épiques, au fun et à la créativité. Rejoignez une communauté dynamique et découvrez des événements uniques !",
                 features: "Fonctionnalités principales",
-                survival: "Survie Améliorée",
-                survivalText: "Profitez d'un gameplay équilibré avec des plugins personnalisés.",
-                events: "Événements Réguliers",
-                eventsText: "Participez à des compétitions et des événements spéciaux chaque semaine.",
-                community: "Communauté Active",
-                communityText: "Discutez, échangez et collaborez avec d'autres joueurs passionnés.",
                 join: "Rejoindre le serveur",
-                ip: "Adresse IP : outside-wallace.joinmc.link",
-                version: "Version recommandée : 1.21.4",
-                download: "Télécharger le Launcher Xénon",
-                downloadText: "Notre launcher personnalisé simplifie l'accès à votre serveur et propose des fonctionnalités exclusives.",
+                download: "Téléchargement pas encore disponible",
                 downloadUnavailable: "Téléchargement pas encore disponible.",
-                footer: "&copy; 2025 Serveur Xénon - Tous droits réservés."
+                ip: "Adresse IP : <strong>outside-wallace.joinmc.link</strong>",
+                version: "Version recommandée : 1.21.4",
+                survival: "Survie Améliorée",
+                survivalDesc: "Profitez d'un gameplay équilibré avec des plugins personnalisés.",
+                events: "Événements Réguliers",
+                eventsDesc: "Participez à des compétitions et des événements spéciaux chaque semaine.",
+                community: "Communauté Active",
+                communityDesc: "Discutez, échangez et collaborez avec d'autres joueurs passionnés.",
+                welcome: "Bienvenue sur Xénon",
+                tagline: "Rejoignez notre aventure Minecraft unique !"
             }
         };
 
-        function changeLanguage(lang) {
-            document.getElementById("about-title").innerText = translations[lang].about;
-            document.getElementById("about-text").innerText = translations[lang].aboutText;
-            document.getElementById("features-title").innerText = translations[lang].features;
-            document.getElementById("survival-title").innerText = translations[lang].survival;
-            document.getElementById("survival-text").innerText = translations[lang].survivalText;
-            document.getElementById("events-title").innerText = translations[lang].events;
-            document.getElementById("events-text").innerText = translations[lang].eventsText;
-            document.getElementById("community-title").innerText = translations[lang].community;
-            document.getElementById("community-text").innerText = translations[lang].communityText;
-            document.getElementById("join-title").innerText = translations[lang].join;
-            document.getElementById("ip-text").innerText = translations[lang].ip;
-            document.getElementById("version-text").innerText = translations[lang].version;
-            document.getElementById("download-title").innerText = translations[lang].download;
-            document.getElementById("download-text").innerText = translations[lang].downloadText;
-            document.getElementById("download-btn").innerText = translations[lang].downloadUnavailable;
-            document.getElementById("footer-text").innerHTML = translations[lang].footer;
+        function switchLanguage(lang) {
+            document.getElementById("about-title").textContent = translations[lang].about;
+            document.getElementById("features-title").textContent = translations[lang].features;
+            document.getElementById("join-title").textContent = translations[lang].join;
+            document.getElementById("download-title").textContent = translations[lang].download;
+            document.getElementById("server-ip").innerHTML = translations[lang].ip;
+            document.getElementById("server-version").textContent = translations[lang].version;
+            document.getElementById("survival-title").textContent = translations[lang].survival;
+            document.getElementById("survival-desc").textContent = translations[lang].survivalDesc;
+            document.getElementById("events-title").textContent = translations[lang].events;
+            document.getElementById("events-desc").textContent = translations[lang].eventsDesc;
+            document.getElementById("community-title").textContent = translations[lang].community;
+            document.getElementById("community-desc").textContent = translations[lang].communityDesc;
+            document.getElementById("welcome-title").textContent = translations[lang].welcome;
+            document.getElementById("tagline").textContent = translations[lang].tagline;
+            document.getElementById("download-btn").textContent = translations[lang].download;
         }
     </script>
 </head>
 <body>
     <header>
-        <h1>Bienvenue sur Xénon</h1>
-        <p>Rejoignez notre aventure Minecraft unique !</p>
+        <h1 id="welcome-title">Bienvenue sur Xénon</h1>
+        <p id="tagline">Rejoignez notre aventure Minecraft unique !</p>
     </header>
 
     <nav>
-        <button onclick="changeLanguage('fr')">FR</button>
-        <button onclick="changeLanguage('en')">EN</button>
+        <a href="#about">À propos</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#join">Rejoindre</a>
+        <a href="#download">Télécharger</a>
     </nav>
+
+    <div class="language-switcher">
+        <button onclick="switchLanguage('fr')">FR</button>
+        <button onclick="switchLanguage('en')">EN</button>
+    </div>
 
     <section id="about">
         <h2 id="about-title">À propos du serveur</h2>
-        <p id="about-text">Xénon est un serveur Minecraft dédié aux aventures épiques, au fun et à la créativité. Rejoignez une communauté dynamique et découvrez des événements uniques !</p>
+        <p>Xénon est un serveur Minecraft dédié aux aventures épiques, au fun et à la créativité. Rejoignez une communauté dynamique et découvrez des événements uniques !</p>
     </section>
 
     <section id="features">
@@ -184,35 +206,35 @@
         <div class="features">
             <div class="feature">
                 <h3 id="survival-title">Survie Améliorée</h3>
-                <p id="survival-text">Profitez d'un gameplay équilibré avec des plugins personnalisés.</p>
+                <p id="survival-desc">Profitez d'un gameplay équilibré avec des plugins personnalisés.</p>
             </div>
             <div class="feature">
                 <h3 id="events-title">Événements Réguliers</h3>
-                <p id="events-text">Participez à des compétitions et des événements spéciaux chaque semaine.</p>
+                <p id="events-desc">Participez à des compétitions et des événements spéciaux chaque semaine.</p>
             </div>
             <div class="feature">
                 <h3 id="community-title">Communauté Active</h3>
-                <p id="community-text">Discutez, échangez et collaborez avec d'autres joueurs passionnés.</p>
+                <p id="community-desc">Discutez, échangez et collaborez avec d'autres joueurs passionnés.</p>
             </div>
         </div>
     </section>
 
     <section id="join">
         <h2 id="join-title">Rejoindre le serveur</h2>
-        <p id="ip-text">Adresse IP : outside-wallace.joinmc.link</p>
-        <p id="version-text">Version recommandée : 1.21.4</p>
+        <p id="server-ip">Adresse IP : <strong>outside-wallace.joinmc.link</strong></p>
+        <p id="server-version">Version recommandée : 1.21.4</p>
     </section>
 
     <section id="download">
-        <h2 id="download-title">Télécharger le Launcher Xénon</h2>
-        <p id="download-text">Notre launcher personnalisé simplifie l'accès à votre serveur et propose des fonctionnalités exclusives.</p>
-        <button id="download-btn" class="download-btn">Téléchargement pas encore disponible.</button>
+        <h2 id="download-title">Téléchargement</h2>
+        <p id="download-btn">Téléchargement pas encore disponible.</p>
     </section>
 
     <footer>
-        <p id="footer-text">&copy; 2025 Serveur Xénon - Tous droits réservés.</p>
+        <p>&copy; 2025 Serveur Xénon - Tous droits réservés.</p>
     </footer>
 </body>
 </html>
+
 
 
